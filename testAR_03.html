@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Hello, World! Argon + A-Frame</title>
+    <meta name="description" content="Hello, World! Argon + A-Frame">
+	
+    <!--<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>-->
+	<script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://rawgit.com/argonjs/argon/develop/dist/argon.js"></script>
+    <script src="https://rawgit.com/argonjs/argon-aframe/master/dist/argon-aframe.js"></script>
+  </head>
+  <body>
+<div id="mydiv"> Welcome to Georgia Tech! </div>
+<ar-scene>
+    <ar-geopose id="GT" lla=" 41.406085, 2.198013" userotation="false"> 
+        <a-entity billboard>
+        <a-entity css-object="div: #mydiv" scale=" 1 1 1 " position="0 0 0"></a-entity>
+        </a-entity>
+    </ar-geopose>
+	
+	<ar-geopose id="GT" lla=" 41.406085, 2.198013" userotation="false"> 
+ 	<a-sphere position="0 2 -1" radius="10.25" color="#EF2D5E"></a-sphere>
+    </ar-geopose>
+	
+	
+	 <ar-geopose id="GT" lla=" 41.406085, 2.198013" userotation="false" trigger="radius:100;event:nearGT"> 
+         <a-entity billboard fixedsize="20">
+           <a-plane rotation="0 90 0" width="2.9" height="4" src="#buzzpin" transparent="true"></a-plane>
+           <a-entity css-object="div: #mydiv" scale="0.02 0.02 0.02" position="0 4 0"></a-entity>
+        </a-entity>
+      </ar-geopose>
+	<a-entity camera></a-entity>
+</ar-scene>
+
+</body>
+</html>

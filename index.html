@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Hello, World! Argon + A-Frame</title>
+    <meta name="description" content="Hello, World! Argon + A-Frame">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/argonjs/argon/develop/dist/argon.js"></script>
+    <script src="https://rawgit.com/argonjs/argon-aframe/master/dist/argon-aframe.js"></script>
+  </head>
+  <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+<a-scene ar> 
+    <ar-geopose id="GT" lla=" 41.370209, 2.155692" userotation="false"> 
+        <a-entity billboard>
+        <a-entity css-object="div: #mydiv" scale=" 1 1 1 " position="0 0 0"></a-entity>
+        </a-entity>
+    </ar-geopose>
+	
+	<ar-geopose id="GT" lla=" -84.398881 33.778463" userotation="false"> 
+ 	<a-sphere position="0 2 -1" radius="10.25" color="#EF2D5E"></a-sphere>
+    </ar-geopose>
+	<a-entity camera></a-entity>
+</a-scene ar>
+</body>
+</html>
